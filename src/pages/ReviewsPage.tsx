@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Loader2, ArrowLeft } from "lucide-react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Loader2 } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { useTranslation } from "react-i18next";
 import { splitTitle } from "@/utils/textUtils";
 import { useScrollToTop } from "@/hooks/use-scroll-to-top";
 import FullScreenLoader from "@/components/FullScreenLoader";
 import BackButton from "@/components/BackButton";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
 const GOOGLE_IFRAME_SRC = "https://f254627a29ac4fd18331a0f3d00dd454.elf.site";
 
@@ -18,8 +16,6 @@ const ReviewsPage: React.FC = () => {
   const [elfsightReady, setElfsightReady] = useState(false);
   const [yandexReady, setYandexReady] = useState(false);
   const [pageLoading, setPageLoading] = useState(true);
-  const navigate = useNavigate();
-  const location = useLocation();
   const { t } = useTranslation();
 
   useScrollToTop();
@@ -91,11 +87,13 @@ const ReviewsPage: React.FC = () => {
   }, []);
 
   // Ensure page starts at top when navigating to /reviews without an anchor
+  const router = useRouter();
+  const pathname = usePathname();
   useEffect(() => {
-    if (!location.hash) {
+    if (typeof window !== "undefined" && !window.location.hash) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
-  }, [location.pathname]);
+  }, [pathname]);
 
   // Control fullscreen page loader: hide shortly after mount; widgets keep their own inline loaders
   useEffect(() => {
@@ -103,7 +101,6 @@ const ReviewsPage: React.FC = () => {
     return () => clearTimeout(timeout);
   }, []);
 
-  const router = useRouter()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background mt-4">
