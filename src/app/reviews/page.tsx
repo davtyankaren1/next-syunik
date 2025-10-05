@@ -14,6 +14,7 @@ import { useRouter, usePathname } from "next/navigation";
 const GOOGLE_IFRAME_SRC = "https://f254627a29ac4fd18331a0f3d00dd454.elf.site";
 
 export default function ReviewsPage() {
+  
   const [googleLoading, setGoogleLoading] = useState(true);
   const [elfsightReady, setElfsightReady] = useState(false);
   const [yandexReady, setYandexReady] = useState(false);
