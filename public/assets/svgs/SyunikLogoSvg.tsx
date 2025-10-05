@@ -1,0 +1,510 @@
+import * as React from "react";
+
+const SyunikLogoSvg = ({ color }) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    xmlnsXlink='http://www.w3.org/1999/xlink'
+    width={150}
+    height={150}
+    viewBox='0 0 1080 360'
+    xmlSpace='preserve'
+  >
+    <desc>{"Created with Fabric.js 5.2.4"}</desc>
+    <defs />
+    <g
+      transform='matrix(1 0 0 1 540 180)'
+      id='c3eace2b-e9e3-47af-88d9-4440b8c4b707'
+    >
+      <rect
+        style={{
+          stroke: "none",
+          strokeWidth: 1,
+          strokeDasharray: "none",
+          strokeLinecap: "butt",
+          strokeDashoffset: 0,
+          strokeLinejoin: "miter",
+          strokeMiterlimit: 4,
+          fill: "rgb(255,255,255)",
+          fillRule: "nonzero",
+          opacity: 1,
+          visibility: "hidden"
+        }}
+        vectorEffect='non-scaling-stroke'
+        x={-540}
+        y={-180}
+        rx={0}
+        ry={0}
+        width={10}
+        height={10}
+      />
+    </g>
+    <g
+      transform='matrix(0 0 0 0 0 0)'
+      id='1d9b5d19-3bdc-44c5-a822-baa00958458e'
+    />
+    <g transform='matrix(1.15 0 0 1.15 540 180)'>
+      <g style={{}} vectorEffect='non-scaling-stroke' >
+        <g transform='matrix(1 0 0 1 -177.25 59.05)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-362.8, -599.05)'
+            d='M 350.7 584.7 L 364.5 584.7 C 370.7 584.7 373.9 587.4000000000001 373.9 591.9000000000001 C 373.9 595.5000000000001 371.5 597.4000000000001 369.2 598.0000000000001 C 371.8 598.7000000000002 375 600.5000000000001 375 605.0000000000001 C 375 610.7000000000002 370.3 613.4000000000001 364.7 613.4000000000001 L 350.59999999999997 613.4000000000001 L 350.59999999999997 584.7 z M 363.5 596.6 C 367.6 596.6 369.6 595.1 369.6 592.3000000000001 C 369.6 589.0000000000001 367 588.0000000000001 363.6 588.0000000000001 L 354.70000000000005 588.0000000000001 L 354.70000000000005 596.5000000000001 L 363.5 596.5000000000001 z M 354.7 610.2 L 363.8 610.2 C 367.2 610.2 370.7 609.2 370.7 605.1 C 370.7 601.7 368 599.9 363.4 599.9 L 354.7 599.9 L 354.7 610.2 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -128.5 59)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-411.55, -599)'
+            d='M 426.6 599 C 426.6 607.1 421.1 614 411.5 614 C 402.3 614 396.5 607.4 396.5 598.9 C 396.5 590.9 402.4 584 411.6 584 C 420.7 584.1 426.6 591 426.6 599 z M 400.7 598.9 C 400.7 605.1 404.5 610.6999999999999 411.59999999999997 610.6999999999999 C 418.59999999999997 610.6999999999999 422.29999999999995 605.4 422.29999999999995 599.0999999999999 C 422.29999999999995 593.1999999999999 418.59999999999997 587.5999999999999 411.4 587.5999999999999 C 404.6 587.5 400.7 592.8 400.7 598.9 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -77.8 59.35)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-462.25, -599.35)'
+            d='M 453.6 584.7 L 453.6 601 C 453.6 608.5 458 610.6 462.40000000000003 610.6 C 467.70000000000005 610.6 470.8 608.1 470.8 601 L 470.8 584.7 L 474.90000000000003 584.7 L 474.90000000000003 601 C 474.90000000000003 610.3 470.00000000000006 614 462.3 614 C 454.6 614 449.6 610.2 449.6 601.3 L 449.6 584.6999999999999 L 453.6 584.6999999999999 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -30.55 59.15)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-509.5, -599.15)'
+            d='M 507.4 588.2 L 496.5 588.2 L 496.5 584.8000000000001 L 522.5 584.8000000000001 L 522.5 588.2 L 511.6 588.2 L 511.6 613.5 L 507.5 613.5 L 507.5 588.2 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 5.9 59.05)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-545.95, -599.05)'
+            d='M 548 584.7 L 548 613.4000000000001 L 543.9 613.4000000000001 L 543.9 584.7 L 548 584.7 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 47.3 61.75)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-587.35, -601.75)'
+            d='M 601.5 599 C 601.5 607.1 596 614 586.4 614 C 577.1999999999999 614 571.4 607.4 571.4 598.9 C 571.4 590.9 577.3 584 586.5 584 C 595.6 584.1 601.5 591 601.5 599 z M 575.6 598.9 C 575.6 605.1 579.4 610.6999999999999 586.5 610.6999999999999 C 593.5 610.6999999999999 597.2 605.4 597.2 599.0999999999999 C 597.2 593.1999999999999 593.5 587.5999999999999 586.3000000000001 587.5999999999999 C 579.6 587.5 575.6 592.8 575.6 598.9 z M 594.2 610.2 L 603.3000000000001 616.7 L 601.0000000000001 619.5 L 591.0000000000001 612.4 L 594.2 610.2 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 97.1 59.35)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-637.15, -599.35)'
+            d='M 628.5 584.7 L 628.5 601 C 628.5 608.5 632.9 610.6 637.3 610.6 C 642.5999999999999 610.6 645.6999999999999 608.1 645.6999999999999 601 L 645.6999999999999 584.7 L 649.8 584.7 L 649.8 601 C 649.8 610.3 644.9 614 637.1999999999999 614 C 629.4999999999999 614 624.4999999999999 610.2 624.4999999999999 601.3 L 624.4999999999999 584.6999999999999 L 628.5 584.6999999999999 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 146.15 59.05)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-686.2, -599.05)'
+            d='M 695.9 600.1 L 678.6999999999999 600.1 L 678.6999999999999 610 L 697.6999999999999 610 L 697.1999999999999 613.4 L 674.6999999999999 613.4 L 674.6999999999999 584.6999999999999 L 696.9 584.6999999999999 L 696.9 588.0999999999999 L 678.8 588.0999999999999 L 678.8 596.5999999999999 L 696 596.5999999999999 L 696 600.1 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 250 59.05)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-790.05, -599.05)'
+            d='M 777.3 584.7 L 781.4 584.7 L 781.4 596.3000000000001 L 798.6999999999999 596.3000000000001 L 798.6999999999999 584.7 L 802.8 584.7 L 802.8 613.4000000000001 L 798.6999999999999 613.4000000000001 L 798.6999999999999 599.7 L 781.4 599.7 L 781.4 613.4000000000001 L 777.3 613.4000000000001 L 777.3 584.7 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 301.1 59)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-841.15, -599)'
+            d='M 856.2 599 C 856.2 607.1 850.7 614 841.1 614 C 831.9 614 826.1 607.4 826.1 598.9 C 826.1 590.9 832 584 841.2 584 C 850.4 584.1 856.2 591 856.2 599 z M 830.4 598.9 C 830.4 605.1 834.1999999999999 610.6999999999999 841.3 610.6999999999999 C 848.3 610.6999999999999 852 605.4 852 599.0999999999999 C 852 593.1999999999999 848.3 587.5999999999999 841.1 587.5999999999999 C 834.3 587.5 830.4 592.8 830.4 598.9 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 348.25 59.15)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-888.3, -599.15)'
+            d='M 886.2 588.2 L 875.3000000000001 588.2 L 875.3000000000001 584.8000000000001 L 901.3000000000001 584.8000000000001 L 901.3000000000001 588.2 L 890.4000000000001 588.2 L 890.4000000000001 613.5 L 886.3000000000001 613.5 L 886.3000000000001 588.2 z'
+            strokeLinecap='round'
+          />
+        </g>
+
+        {/* SYUNIK */}
+        <g transform='matrix(1 0 0 1 394.25 59.05)' style={{ fill: color }}>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-934.3, -599.05)'
+            d='M 944 600.1 L 926.8 600.1 L 926.8 610 L 945.8 610 L 945.3 613.4 L 922.8 613.4 L 922.8 584.6999999999999 L 945 584.6999999999999 L 945 588.0999999999999 L 926.9 588.0999999999999 L 926.9 596.5999999999999 L 944 596.5999999999999 L 944 600.1 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 439.1 59.1)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-979.15, -599.1)'
+            d='M 968.5 584.7 L 972.5 584.7 L 972.5 610 L 989.8 610 L 989.1999999999999 613.5 L 968.4999999999999 613.5 L 968.4999999999999 584.7 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -139.6 -22.9)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-400.45, -517.1)'
+            d='M 401.3 569.8 C 394.40000000000003 569.8 387.90000000000003 569.3 381.7 568.1999999999999 C 375.59999999999997 567.0999999999999 370.2 565.3 365.5 562.8 C 360.9 560.3 357.2 556.9 354.6 552.6999999999999 C 352 548.4999999999999 350.70000000000005 543.3 350.70000000000005 537.0999999999999 C 350.70000000000005 536.6999999999999 350.70000000000005 536.3 350.70000000000005 535.8999999999999 C 350.70000000000005 535.4999999999999 350.70000000000005 535.1999999999998 350.80000000000007 534.8999999999999 L 374.4000000000001 534.8999999999999 C 374.30000000000007 535.1999999999998 374.30000000000007 535.5999999999999 374.30000000000007 536.0999999999999 C 374.30000000000007 536.5999999999999 374.30000000000007 537.0999999999999 374.30000000000007 537.5999999999999 C 374.30000000000007 540.8 375.4000000000001 543.3 377.50000000000006 545.3 C 379.6000000000001 547.3 382.70000000000005 548.8 386.70000000000005 549.6999999999999 C 390.70000000000005 550.6999999999999 395.40000000000003 551.1999999999999 400.70000000000005 551.1999999999999 C 403.40000000000003 551.1999999999999 406.00000000000006 551.0999999999999 408.50000000000006 550.8 C 411.00000000000006 550.5 413.30000000000007 550.0999999999999 415.40000000000003 549.5999999999999 C 417.50000000000006 549.0999999999999 419.3 548.3999999999999 420.90000000000003 547.4999999999999 C 422.50000000000006 546.5999999999999 423.70000000000005 545.5999999999999 424.6 544.3999999999999 C 425.5 543.1999999999998 425.90000000000003 541.7999999999998 425.90000000000003 540.1999999999998 C 425.90000000000003 537.5999999999998 424.90000000000003 535.5999999999998 422.8 533.9999999999998 C 420.7 532.4999999999998 418 531.1999999999998 414.6 530.0999999999998 C 411.20000000000005 529.0999999999998 407.3 528.0999999999998 403 527.3999999999997 C 398.6 526.5999999999998 394.2 525.6999999999997 389.6 524.7999999999997 C 385 523.8999999999997 380.6 522.5999999999997 376.3 521.1999999999997 C 372 519.7999999999997 368.1 517.7999999999997 364.7 515.5999999999997 C 361.2 513.2999999999997 358.5 510.3999999999997 356.5 506.8999999999997 C 354.5 503.3999999999997 353.5 499.0999999999997 353.5 494.0999999999997 C 353.5 489.1999999999997 354.6 484.79999999999967 356.9 481.0999999999997 C 359.2 477.29999999999967 362.4 474.29999999999967 366.7 471.79999999999967 C 370.9 469.3999999999997 376 467.5999999999997 381.8 466.29999999999967 C 387.6 465.0999999999997 394.1 464.3999999999997 401.1 464.3999999999997 C 408 464.3999999999997 414.3 464.9999999999997 420 466.29999999999967 C 425.7 467.49999999999966 430.6 469.3999999999997 434.6 471.8999999999997 C 438.70000000000005 474.3999999999997 441.8 477.4999999999997 444 481.1999999999997 C 446.2 484.8999999999997 447.3 489.2999999999997 447.3 494.2999999999997 L 447.3 496.1999999999997 L 424 496.1999999999997 L 424 494.6999999999997 C 424 492.2999999999997 423.1 490.2999999999997 421.2 488.4999999999997 C 419.3 486.6999999999997 416.7 485.2999999999997 413.4 484.2999999999997 C 410.09999999999997 483.2999999999997 406.2 482.7999999999997 401.79999999999995 482.7999999999997 C 396.49999999999994 482.7999999999997 391.99999999999994 483.1999999999997 388.49999999999994 483.9999999999997 C 384.8999999999999 484.7999999999997 382.29999999999995 485.8999999999997 380.59999999999997 487.3999999999997 C 378.9 488.8999999999997 377.99999999999994 490.5999999999997 377.99999999999994 492.3999999999997 C 377.99999999999994 494.6999999999997 378.99999999999994 496.4999999999997 380.99999999999994 497.9999999999997 C 382.99999999999994 499.3999999999997 385.79999999999995 500.59999999999974 389.19999999999993 501.59999999999974 C 392.69999999999993 502.4999999999997 396.49999999999994 503.39999999999975 400.79999999999995 504.19999999999976 C 405.09999999999997 504.9999999999998 409.49999999999994 505.89999999999975 414.09999999999997 506.7999999999998 C 418.7 507.69999999999976 423.09999999999997 508.8999999999998 427.4 510.3999999999998 C 431.7 511.7999999999998 435.59999999999997 513.6999999999998 439 515.9999999999998 C 442.5 518.2999999999997 445.2 521.0999999999998 447.2 524.4999999999998 C 449.2 527.8999999999997 450.2 531.9999999999998 450.2 536.8999999999997 C 450.2 544.7999999999997 448.09999999999997 551.1999999999997 444 555.9999999999998 C 439.8 560.7999999999997 434.1 564.3999999999997 426.7 566.4999999999998 C 419.3 568.7 410.9 569.8 401.3 569.8 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -30.4 -22.95)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-509.65, -517.05)'
+            d='M 497.7 568 L 497.7 527.1 L 453 466.1 L 481 466.1 L 509.8 507 L 510.8 507 L 539.6 466.1 L 566.3000000000001 466.1 L 521.7 527 L 521.7 568 L 497.7 568 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 91.3 -22)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-631.35, -518)'
+            d='M 631.3 569.8 C 620.0999999999999 569.8 610.6999999999999 568.0999999999999 603.0999999999999 564.5999999999999 C 595.4999999999999 561.0999999999999 589.8 556.0999999999999 585.8999999999999 549.4999999999999 C 581.9999999999999 542.8999999999999 580.0999999999999 534.7999999999998 580.0999999999999 525.1999999999999 L 580.0999999999999 466.19999999999993 L 604 466.19999999999993 L 604 524.3 C 604 532.6999999999999 606.4 539.1999999999999 611.1 543.8 C 615.8000000000001 548.4 622.6 550.6999999999999 631.3000000000001 550.6999999999999 C 640.0000000000001 550.6999999999999 646.7 548.4 651.5000000000001 543.8 C 656.3000000000001 539.1999999999999 658.7000000000002 532.6999999999999 658.7000000000002 524.3 L 658.7000000000002 466.19999999999993 L 682.6000000000001 466.19999999999993 L 682.6000000000001 525.1999999999999 C 682.6000000000001 534.8 680.6000000000001 542.9 676.7000000000002 549.4999999999999 C 672.8000000000002 556.0999999999999 667.1000000000001 561.1999999999999 659.5000000000001 564.5999999999999 C 651.9 568 642.5 569.8 631.3 569.8 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 218.4 -22.95)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-758.45, -517.05)'
+            d='M 706.9 568 L 706.9 466.1 L 728.8 466.1 L 776.5 519.2 C 777.4 520 778.5 521.1 779.7 522.6 C 780.9000000000001 524.1 782.2 525.6 783.5 527 C 784.8 528.5 785.8 529.8 786.6 530.9 L 787.6 530.8 C 787.5 529 787.4 527 787.4 524.6999999999999 C 787.3 522.4 787.3 520.4999999999999 787.3 518.8 L 787.3 466.19999999999993 L 810 466.19999999999993 L 810 568 L 788.4 568 L 740.4 514.3 C 738.6 512.4 736.8 510.29999999999995 734.8 508.09999999999997 C 732.9 505.79999999999995 731.4 503.99999999999994 730.3 502.79999999999995 L 729.4 502.79999999999995 C 729.4 504.19999999999993 729.4 505.99999999999994 729.5 508.19999999999993 C 729.5 510.3999999999999 729.6 512.8 729.6 515.4 L 729.6 568 L 706.9 568 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 306.9 -22.95)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-846.95, -517.05)'
+            d='M 835 568 L 835 466.1 L 858.9 466.1 L 858.9 568 L 835 568 z'
+            strokeLinecap='round'
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 396.95 -22.95)'>
+          <path
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: color,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            transform=' translate(-937, -517.05)'
+            d='M 883.8 568 L 883.8 466.1 L 907.6999999999999 466.1 L 907.6999999999999 515.6 L 959.1999999999999 466.1 L 989.3 466.1 L 946.1999999999999 507.90000000000003 L 990.1999999999999 568 L 960.9999999999999 568 L 929 523.3 L 907.6 541.1999999999999 L 907.6 568 L 883.8 568 z'
+            strokeLinecap='round'
+          />
+        </g>
+
+        <g transform='matrix(1 0 0 1 -334.6 0)'>
+          <polygon
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: "rgb(237,80,39)",
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            points='115.55,-10.5 115.55,10.5 94.55,10.5 94.55,31.5 73.55,31.5 73.55,52.5 52.55,52.5 52.55,73.5 31.55,73.5 31.55,94.5 10.55,94.5 10.55,115.6 -10.45,115.6 -10.45,94.5 -31.55,94.5 -31.55,73.5 -52.55,73.5 -52.55,52.5 -73.55,52.5 -73.55,31.5 -94.55,31.5 -94.55,10.5 -115.55,10.5 -115.55,-10.5 -94.55,-10.5 -94.55,-31.5 -73.55,-31.5 -73.55,-52.5 -52.55,-52.5 -52.55,-73.5 -31.55,-73.5 -31.55,-94.5 -10.45,-94.5 -10.45,-115.6 10.55,-115.6 10.55,-94.5 31.55,-94.5 31.55,-73.5 52.55,-73.5 52.55,-52.5 73.55,-52.5 73.55,-31.5 94.55,-31.5 94.55,-10.5 '
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -334.6 0)'>
+          <polygon
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: "rgb(100,2,17)",
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            points='73.55,-10.5 73.55,10.5 52.55,10.5 52.55,31.5 31.55,31.5 31.55,52.5 10.55,52.5 10.55,73.5 -10.45,73.5 -10.45,52.5 -31.55,52.5 -31.55,31.5 -52.55,31.5 -52.55,10.5 -73.55,10.5 -73.55,-10.5 -52.55,-10.5 -52.55,-31.5 -31.55,-31.5 -31.55,-52.5 -10.45,-52.5 -10.45,-73.5 10.55,-73.5 10.55,-52.5 31.55,-52.5 31.55,-31.5 52.55,-31.5 52.55,-10.5 '
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -334.6 0)'>
+          <polygon
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fill: "rgb(251,221,195)",
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            points='31.55,-10.5 31.55,10.5 10.55,10.5 10.55,31.5 -10.45,31.5 -10.45,10.5 -31.55,10.5 -31.55,-10.5 -10.45,-10.5 -10.45,-31.5 10.55,-31.5 10.55,-10.5 '
+          />
+        </g>
+        <g transform='matrix(1 0 0 1 -334.55 0)' fill='black'>
+          <rect
+            style={{
+              stroke: "none",
+              strokeWidth: 1,
+              strokeDasharray: "none",
+              strokeLinecap: "butt",
+              strokeDashoffset: 0,
+              strokeLinejoin: "miter",
+              strokeMiterlimit: 4,
+              fillRule: "nonzero",
+              opacity: 1
+            }}
+            vectorEffect='non-scaling-stroke'
+            x={-10.5}
+            y={-10.5}
+            rx={0}
+            ry={0}
+            width={21}
+            height={21}
+          />
+        </g>
+      </g>
+    </g>
+  </svg>
+);
+export default SyunikLogoSvg;

@@ -1,0 +1,152 @@
+{
+  "nav": {
+    "home": "Home",
+    "rooms": "Rooms",
+    "services": "Services",
+    "about": "About",
+    "reviews": "Reviews",
+    "blog": "Blog",
+    "contact": "Contact",
+    "back_button": "Back"
+  },
+  "common": {
+    "language": "Language",
+    "followUs": "Follow Us",
+    "allRightsReserved": "All rights reserved.",
+    "viewDetails": "View Details",
+    "bookNow": "Book Now",
+    "from": "from",
+    "night": "night",
+    "checkIn": "Check In",
+    "readBlog": "Read Blog",
+    "checkOut": "Check Out",
+    "guests": "Guests",
+    "adults": "Adults",
+    "children": "Children",
+    "search": "Search"
+  },
+  "hero": {
+    "title": "Welcome to Syunik Hotel",
+    "subtitle": "Experience luxury and comfort in the heart of Armenia",
+    "discoverLuxury": "Discover Luxury"
+  },
+  "rooms": {
+    "title": "Our Rooms",
+    "subtitle": "Choose your perfect accommodation",
+    "our_all_rooms": "All our rooms",
+    "standard": "Standard Room",
+    "deluxe": "Deluxe Room",
+    "suite": "Suite",
+    "presidential": "Presidential Suite",
+    "features": "Room Features",
+    "amenities": "Amenities",
+    "maxGuests": "Max Guests",
+    "see_reviews": "See reviews",
+    "see_more": "See the details",
+    "see_rooms": "See rooms",
+    "book_room": "Book room", 
+    "room_details": "Room details",
+    "you_may_be_interested_in": "You may be interested in",
+    "size": "Size",
+    "bed": "Bed",
+    "children": "Children",
+    "floor": "Floor",
+    "price": "Price",
+    "people": "People"
+  },
+  "services": {
+    "title": "Hotel Amenities",
+    "subtitle": "Complete services for your comfort",
+    "freeParking": "Free Self-Parking",
+    "freeParkingDesc": "Free parking is available for our guests",
+    "highSpeedInternet": "High speed Internet access",
+    "highSpeedInternetDesc": "There is high speed internet",
+    "complimentaryWifi": "Complimentary WiFi in public areas",
+    "complimentaryWifiDesc": "We have free Wi-Fi throughout the hotel",
+    "elevators": "Elevators",
+    "elevatorsDesc": "Elevators are available",
+    "meetingRooms": "Meeting rooms",
+    "meetingRoomsDesc": "We have spacious rooms for organizing various types of meetings and events.",
+    "laundryService": "Laundry and Valet service",
+    "laundryServiceDesc": "Laundry and maid service available."
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "The story of Syunik Hotel",
+    "description": "Syunik Hotel is one of the most luxurious hotels in Armenia with rich traditions. Our goal is to provide unforgettable hospitality and unmatched comfort.",
+    "yearsExperience": "Years of Experience",
+    "daysOpen": "Days Open",
+    "rating": "Rating"
+  },
+  "reviews": {
+    "title": "Guest Reviews",
+    "subtitle": "See what our guests are saying about their stay at Syunik",
+    "platform_intro": "Our guests' feedback is invaluable. Here's what they're saying on major platforms"
+  },
+  "roomData": {
+    "deluxe": {
+      "name": "Deluxe Room",
+      "description": "Deluxe room with beautiful mountain views. A wonderful combination of elegance and comfort"
+    },
+    "executive": {
+      "name": "Executive Room", 
+      "description": "Modern design meets cutting-edge functionality. Business-friendly amenities are provided",
+      "shortDescription": "Modern design meets cutting-edge functionality. Business-friendly amenities are provided"
+    },
+    "family": {
+      "name": "Family Room",
+      "description": "Spacious family room with separate areas. Design is suitable considering children's comfort",
+      "shortDescription": "Spacious family room with separate areas. Design is suitable considering children's comfort"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Contact us for more details or suggestions",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "sendMessage": "Send Message",
+    "yourName": "Your Name",
+    "yourPhone": "Your phone number",
+    "subject": "Subject",
+    "message": "Message",
+    "working_hours": "Working Hours",
+    "send": "Send"
+  },
+  "footer": {
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactInfo": "Contact Info",
+    "description": "Experience the perfect blend of luxury and Armenian hospitality in the heart of Syunik region. Where every moment becomes an unforgettable memory.",
+    "services": {
+      "restaurant": "Restaurant & Bar",
+      "spa": "Spa & Wellness", 
+      "conference": "Conference Rooms",
+      "transfer": "Airport Transfer",
+      "concierge": "Concierge Service",
+      "roomService": "Room Service"
+    }
+  },
+  "notFound": {
+    "title": "404 Page not found",
+    "description": "The page you’re looking for doesn’t exist or may have been moved. You can return home or explore our rooms.",
+    "goHome": "Go Home",
+    "browseRooms": "Browse Rooms",
+    "contactUs": "Contact Us",
+    "requestedUrl": "Requested URL"
+  },
+ "blog": {
+  "blogHeader": "Syunik Blog",
+  "subtitle": "Visit Kapan"
+},
+"comments": {
+  "guests_comments_title": "Guest Comments",
+  "guests_comments_subtitle": "Share your experience or ask a question about this room",
+  "name": "Your Name",
+  "your_comment": "Your Comment",
+  "comment": "Comment",
+  "created_at": "Created At",
+  "updated_at": "Updated At",
+  "submit_comment": "Submit Comment"
+}
+}

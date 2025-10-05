@@ -1,26 +1,449 @@
 @import "tailwindcss";
+/* Global theme variables and Tailwind layers (migrated from Vite index.css) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* Tailwind v4 theme tokens mapped to our CSS variables */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Font families */
+  --font-montserrat: "Montserrat", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --radius: 0.75rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Local Armenian font: only used for Armenian Unicode range */
+@font-face {
+  font-family: "SyunikArmenian";
+  src: url("/armfont-7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  /* Armenian: U+0530–U+058F, plus Armenian ligatures U+FB13–U+FB17 */
+  unicode-range: U+0530-058F, U+FB13-FB17;
+}
+
+/* RTL Support for Persian/Farsi */
+[dir="rtl"] {
+  text-align: right;
+}
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Brand Color Palette */
+    --brand-primary: 12 85% 54%; /* #ED5027 - Vibrant red-orange */
+    --brand-secondary: 348 89% 20%; /* #640211 - Deep maroon */
+    --brand-accent: 33 70% 88%; /* #FBDDC3 - Warm cream */
+    --brand-text: 153 25% 6%; /* #080E0C - Dark forest green */
+
+    /* Semantic Design Tokens */
+    --background: 33 70% 88%; /* Warm cream background */
+    --foreground: 153 25% 6%; /* Dark text */
+
+    --card: 0 0% 100%; /* Pure white for cards */
+    --card-foreground: 153 25% 6%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 153 25% 6%;
+
+    --primary: 12 85% 54%; /* Brand primary */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 348 89% 20%; /* Brand secondary */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 33 40% 92%; /* Lighter cream */
+    --muted-foreground: 153 15% 40%;
+
+    --accent: 33 70% 88%; /* Brand accent */
+    --accent-foreground: 153 25% 6%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 33 30% 85%;
+    --input: 0 0% 100%;
+    --ring: 12 85% 54%;
+
+    --radius: 0.75rem;
+
+    /* Custom Design Variables */
+    --hero-overlay: 0 0% 0% / 0.4; /* Semi-transparent overlay */
+    --header-bg: 0 0% 100% / 0.95; /* Transparent white header */
+    --container-padding: 2rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(
+      135deg,
+      hsl(var(--brand-primary)),
+      hsl(var(--brand-secondary))
+    );
+    --gradient-accent: linear-gradient(
+      135deg,
+      hsl(var(--brand-accent)),
+      hsl(var(--background))
+    );
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(var(--brand-primary) / 0.1);
+    --shadow-hover: 0 8px 30px hsl(var(--brand-primary) / 0.2);
+    --shadow-elegant: 0 10px 40px hsl(var(--brand-secondary) / 0.15);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    /* Ensure Armenian glyphs use local Armenian font; others remain Montserrat */
+    font-family: "SyunikArmenian", Montserrat, sans-serif;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ed4e26;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #d63f1e;
+  }
+
+  /* Firefox scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: #ed4e26 hsl(var(--background));
+  }
+}
+
+/* Ensure anchored sections account for fixed header height only on mobile */
+@media (max-width: 767px) {
+  section[id] {
+    scroll-margin-top: 60px; /* mobile header height */
+  }
+}
+
+@layer base {
+  /* Hide native cursor globally while custom cursor is active, on all descendants */
+  html.custom-cursor-active,
+  html.custom-cursor-active *,
+  html.custom-cursor-active *:hover,
+  html.custom-cursor-active *:active,
+  html.custom-cursor-active *:focus {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  /* Container System */
+  .hotel-container {
+    @apply max-w-7xl mx-auto px-6 md:px-8 lg:px-12;
+  }
+
+  /* Hero Overlay */
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  /* Header Scroll Effect */
+  .header-scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid hsl(var(--border));
+  }
+
+  /* Room Card Hover Effect */
+  .room-card-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Smooth animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Floating animations for about images */
+  @keyframes float1 {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+  }
+
+  @keyframes float2 {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-8px) rotate(-1deg);
+    }
+  }
+
+  @keyframes float3 {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-12px) rotate(0.5deg);
+    }
+  }
+
+  @keyframes float4 {
+    0%,
+    100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-6px) rotate(-0.5deg);
+    }
+  }
+
+  .about-image-1 { animation: float1 6s ease-in-out infinite; }
+  .about-image-2 { animation: float2 7s ease-in-out infinite; }
+  .about-image-3 { animation: float3 5s ease-in-out infinite; }
+  .about-image-4 { animation: float4 8s ease-in-out infinite; }
+
+  /* Hover underline effect */
+  .menu-item {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none !important; /* remove default underline */
+  }
+
+  .menu-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background: hsl(var(--brand-primary));
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+
+  .menu-item.active::after,
+  .menu-item:hover::after { width: 100%; }
+
+  /* Match text color to underline on hover/active */
+  .menu-item:hover,
+  .menu-item.active {
+    color: hsl(var(--brand-primary)) !important;
+    text-decoration: none !important;
+  }
+
+  /* Image-based pointer to the booking button (desktop only) */
+  .book-arrow {
+    position: fixed;
+    right: 120px; /* sits to the left of the fixed button */
+    bottom: 90px;
+    width: 140px;
+    height: auto;
+    z-index: 40;
+    pointer-events: none; /* purely decorative */
+    filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
+    animation: arrowPulse 2.5s ease-in-out infinite;
+  }
+
+  @keyframes arrowPulse {
+    0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.95; }
+    50% { transform: translateY(-6px) rotate(0deg); opacity: 1; }
+  }
+
+  @media (max-width: 1024px) { .book-arrow { display: none; } }
+
+  /* Simple Unified Section Headers */
+  .section-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-header::before,
+  .section-header::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      hsl(var(--brand-primary)) 50%,
+      transparent 100%
+    );
+    max-width: 80px;
+  }
+
+  .section-header-text {
+    font-weight: 700;
+    color: hsl(var(--brand-text));
+    white-space: nowrap;
+    position: relative;
+    padding: 0 1rem;
+  }
+
+  .section-header-text .accent-word { color: hsl(var(--brand-primary)); }
+
+  /* Logo accent for section headers */
+  .logo-accent {
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+    filter: brightness(0) saturate(100%) invert(27%) sepia(89%) saturate(1952%) hue-rotate(346deg) brightness(87%) contrast(97%);
+  }
+
+  /* White text variant for dark backgrounds */
+  .section-header-white .section-header-text { color: white; }
+  .section-header-white .section-header-text .accent-word { color: hsl(var(--brand-primary)); }
+  .section-header-white .logo-accent { filter: brightness(0) saturate(100%) invert(100%); }
+  .section-header-white::before,
+  .section-header-white::after {
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      transparent 100%
+    );
+  }
+
+  /* Section header variant that allows wrapping (use on tight layouts/mobile) */
+  .section-header--wrap { justify-content: flex-start; gap: 0.5rem; }
+  .section-header--wrap::before,
+  .section-header--wrap::after { display: none; }
+  .section-header--wrap .section-header-text { white-space: normal; }
+}
+
+.floating-light {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  filter: blur(2px);
+  animation-name: floatLight;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floatLight {
+  0% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
+  50% { transform: translateY(-20px) translateX(10px); opacity: 0.7; }
+  100% { transform: translateY(0px) translateX(0px); opacity: 0.3; }
 }

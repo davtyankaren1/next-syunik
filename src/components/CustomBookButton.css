@@ -1,0 +1,103 @@
+.custom-button {
+    border: none;
+    border-radius: 14px;
+    overflow: hidden;
+    padding: 10px 20px 10px 56px; /* leave space for the left icon on desktop */
+    margin-bottom: 20px;
+    font-size: 20px;
+    position: relative;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    min-width: 200px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+    -webkit-transition: background-position .7s, box-shadow .4s;
+    transition: background-position .7s, box-shadow .4s;
+    background-size: 110%;
+  }
+  
+  .custom-button__icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    filter: drop-shadow(0 0 6px rgba(0,0,0,0.35));
+    transition: transform .4s ease, opacity .25s ease;
+    pointer-events: none;
+  }
+  
+  .custom-button__text {
+    font-weight: bold; 
+  }
+  
+  .custom-button__bg {
+    position: absolute;
+    right: -100px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 120px;
+    background-image: url('/assets/logo/logo-sign.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0; /* invisible initially */
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.25));
+    transition: right .4s, opacity .3s ease;
+    pointer-events: none;
+  }
+  
+  .custom-button:hover .custom-button__icon {
+    transform: translateY(-50%) scale(1.12);
+  }
+  
+  .custom-button:hover .custom-button__bg {
+    right: 8px; /* slide fully into the button */
+    opacity: .22; /* fade in */
+  }
+  
+  .custom-button:hover {
+    background-position: 0% 30%;
+  }
+  
+  .custom-button:hover:after {
+    right: -40px;
+    transition: right .4s, transform 30s .2s linear;
+  }
+  
+  .custom-button:after {
+    display: block;
+    position: absolute;
+    font-size: 100px;
+    opacity: .3;
+    right: -120px;
+  }
+  
+  .custom-button {
+    background-image: linear-gradient(to bottom, #ED5027, rgba(154, 40, 87, 0.24)), url("https://t3.ftcdn.net/jpg/05/48/52/20/360_F_548522072_V4Cdwk3kUFFrMBRAWTC7fsGS9q0W4VAR.jpg");
+  }
+  
+  /* Mobile/Tablet: icon-only view */
+  @media (max-width: 1024px) {
+    .custom-button {
+      min-width: 48px;
+      min-height: 48px;
+      padding: 10px; /* remove extra left padding */
+      gap: 0;
+      border-radius: 14px;
+    }
+    .custom-button__text { display: none !important; }
+    .custom-button__icon {
+      position: static;
+      transform: none;
+      width: 24px;
+      height: 24px;
+    }
+    .custom-button__bg { display: none !important; }
+  }
