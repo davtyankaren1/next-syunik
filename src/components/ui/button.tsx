@@ -22,7 +22,7 @@ const buttonVariants = cva(
         primary:
           "bg-brand-primary text-white hover:bg-brand-primary/90 shadow-lg hover:shadow-xl transform ",
         outlineBrand:
-          "border-2 border-[#ED5027] text-[#ED5027] bg-white rounded-[14px] hover:bg-[#ED5027] hover:text-white hover:shadow-md",
+          "border-1 border-[#ED5027] text-[#ED5027] bg-white rounded-[14px] hover:bg-[#ED5027] hover:text-white hover:shadow-md",
         hero: "bg-brand-primary text-white px-8 py-4 text-lg font-semibold hover:bg-brand-primary/90 shadow-xl hover:shadow-2xl transform ",
         "outline-hero":
           "border-2 border-white text-white bg-transparent hover:bg-white hover:text-brand-text px-8 py-4 text-lg font-semibold backdrop-blur-sm"

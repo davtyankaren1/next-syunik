@@ -19,12 +19,14 @@ const BlogCard: React.FC<BlogCardProps> = ({
   image,
   bullets,
   onViewPath,
-  className = "",
+  className = ""
 }) => {
   const router = useRouter();
 
   return (
-    <div className={`group relative bg-card rounded-2xl overflow-hidden shadow-lg md:hover:shadow-2xl transition-all duration-500 transform flex flex-col ${className}`}>
+    <div
+      className={`group relative bg-card rounded-2xl overflow-hidden shadow-lg md:hover:shadow-2xl transition-all duration-500 transform flex flex-col ${className}`}
+    >
       {/* Image */}
       <div className='relative h-64 overflow-hidden'>
         <img
@@ -51,8 +53,13 @@ const BlogCard: React.FC<BlogCardProps> = ({
       </div>
 
       {/* Card Content */}
-      <div className='p-6 flex-1 flex flex-col'>
-        <h3 className='text-xl font-semibold text-brand-text mb-3 min-h-[56px] line-clamp-2'>{title}</h3>
+      <div className='p-6 flex-1 flex flex-col min-h-[300px]'>
+        {/* Title */}
+        <h3 className='text-xl font-semibold text-brand-text mb-3 min-h-[56px] line-clamp-2'>
+          {title}
+        </h3>
+
+        {/* Bullet points */}
         {bullets && bullets.length > 0 && (
           <div className='text-brand-text/70 text-sm mb-4 space-y-1 min-h-[84px]'>
             {bullets.map((b, i) => (
@@ -61,14 +68,15 @@ const BlogCard: React.FC<BlogCardProps> = ({
           </div>
         )}
 
+        {/* Button */}
         <Button
-                  variant='outlineBrand'
-                  className='w-full rounded-[14px] group/button px-6 py-6'
-                  onClick={() => router.push(onViewPath || `/blog/${id}`)}
-                >
-                  {t('common.readBlog')}
-                  <ArrowRight className='w-4 h-4 ml-1 group-hover/button:translate-x-1 transition-transform' />
-                </Button>
+          variant='outlineBrand'
+          className='w-full rounded-[14px] group/button px-6 py-6 mt-auto'
+          onClick={() => router.push(onViewPath || `/blog/${id}`)}
+        >
+          {t("common.readBlog")}
+          <ArrowRight className='w-4 h-4 ml-1 group-hover/button:translate-x-1 transition-transform' />
+        </Button>
       </div>
     </div>
   );

@@ -33,7 +33,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import CommentForm from "@/components/CommentForm";
 import CommentsList from "@/components/CommentsList";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from "@/components/ui/carousel";
 import BackButton from "@/components/BackButton";
 
 const RoomDetail = () => {
@@ -43,7 +49,9 @@ const RoomDetail = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const dispatch = useAppDispatch();
   const { data: room, loading, error } = useAppSelector((s) => s.roomDetail);
-  const { items: rooms, loading: roomsLoading } = useAppSelector((s) => s.rooms);
+  const { items: rooms, loading: roomsLoading } = useAppSelector(
+    (s) => s.rooms
+  );
 
   useScrollToTop();
 
@@ -58,18 +66,26 @@ const RoomDetail = () => {
     }
   }, [dispatch, rooms?.length]);
 
-  console.log(room, 'room')
+  console.log(room, "room");
 
   // Removed slide animation state
 
-  const images: string[] = [room?.image_1, room?.image_2, room?.image_3, room?.image_4].filter(Boolean) as string[];
+  const images: string[] = [
+    room?.image_1,
+    room?.image_2,
+    room?.image_3,
+    room?.image_4
+  ].filter(Boolean) as string[];
 
   const nextImage = () => {
     setCurrentImageIndex((prev) => (prev + 1) % Math.max(images.length, 1));
   };
 
   const prevImage = () => {
-    setCurrentImageIndex((prev) => (prev - 1 + Math.max(images.length, 1)) % Math.max(images.length, 1));
+    setCurrentImageIndex(
+      (prev) =>
+        (prev - 1 + Math.max(images.length, 1)) % Math.max(images.length, 1)
+    );
   };
 
   // Auto-slide effect
@@ -84,7 +100,12 @@ const RoomDetail = () => {
   useEffect(() => {
     if (loading || !room) return;
     const ctx = gsap.context(() => {
-      gsap.from(".rd-image", { opacity: 0, scale: 0.98, duration: 0.6, ease: "power2.out" });
+      gsap.from(".rd-image", {
+        opacity: 0,
+        scale: 0.98,
+        duration: 0.6,
+        ease: "power2.out"
+      });
       gsap.from([".rd-stagger"], {
         opacity: 0,
         y: 16,
@@ -93,7 +114,14 @@ const RoomDetail = () => {
         stagger: 0.08,
         delay: 0.1
       });
-      gsap.from(".rd-thumb", { opacity: 0, y: 8, duration: 0.4, ease: "power2.out", stagger: 0.06, delay: 0.2 });
+      gsap.from(".rd-thumb", {
+        opacity: 0,
+        y: 8,
+        duration: 0.4,
+        ease: "power2.out",
+        stagger: 0.06,
+        delay: 0.2
+      });
     });
     return () => ctx.revert();
   }, [loading, room]);
@@ -107,7 +135,6 @@ const RoomDetail = () => {
     return shuffled.slice(0, 3);
   }, [rooms, room?.id]);
 
-
   if (loading) {
     // Show the dedicated full-screen loader without any layout wrappers to avoid margins/padding
     return <FullScreenLoader />;
@@ -118,7 +145,9 @@ const RoomDetail = () => {
       <div className='min-h-screen bg-background'>
         <Header forceWhite={true} />
         <section className='pt-28'>
-          <div className='hotel-container text-red-600'>{error || 'Room not found'}</div>
+          <div className='hotel-container text-red-600'>
+            {error || "Room not found"}
+          </div>
         </section>
         <Footer />
       </div>
@@ -126,8 +155,8 @@ const RoomDetail = () => {
   }
 
   const lang = resolveLang(i18n.language);
-  const name = pickLocalized(room as any, 'name', lang) || '';
-  const description = pickLocalized(room as any, 'description', lang) || '';
+  const name = pickLocalized(room as any, "name", lang) || "";
+  const description = pickLocalized(room as any, "description", lang) || "";
 
   return (
     <div className='min-h-screen bg-background'>
@@ -143,10 +172,12 @@ const RoomDetail = () => {
             <ArrowLeft className='w-4 h-4' />
             {t("nav.back_button")}
           </Button> */}
-          <BackButton 
-                        onClick={() => router.push('/rooms')} 
-                        label="Go Home" // Optional, you can omit this if you just want "Back"
-                      />
+          <div className='mb-6'>
+            <BackButton
+              onClick={() => router.push("/rooms")}
+              label='Go Home' // Optional, you can omit this if you just want "Back"
+            />
+          </div>
         </div>
       </section>
 
@@ -160,7 +191,9 @@ const RoomDetail = () => {
                 <div className='w-full h-full overflow-hidden'>
                   <div
                     className='flex w-full h-full transition-transform duration-500 ease-out rd-image'
-                    style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+                    style={{
+                      transform: `translateX(-${currentImageIndex * 100}%)`
+                    }}
                   >
                     {images.map((src, i) => (
                       <img
@@ -168,7 +201,7 @@ const RoomDetail = () => {
                         src={src}
                         alt={`${name} - Image ${i + 1}`}
                         className='w-full h-full object-cover flex-shrink-0'
-                        style={{ width: '100%' }}
+                        style={{ width: "100%" }}
                       />
                     ))}
                   </div>
@@ -206,7 +239,9 @@ const RoomDetail = () => {
                     />
                     <div
                       className={`absolute inset-0 pointer-events-none ${
-                        currentImageIndex === index ? 'bg-brand-primary/40' : 'bg-white/20'
+                        currentImageIndex === index
+                          ? "bg-brand-primary/40"
+                          : "bg-white/20"
                       }`}
                     ></div>
                   </button>
@@ -232,11 +267,15 @@ const RoomDetail = () => {
                   className='h-9 px-4 rounded-lg'
                   onClick={() => router.push(`/booki/${room.id}`)}
                 >
-                  {t('rooms.book_room')}
+                  {t("rooms.book_room")}
                 </Button>
                 <div className='bg-white rounded-lg h-9 px-3 flex items-center gap-1 border border-border/60 shadow-sm'>
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className='w-4 h-4 text-amber-400' fill='currentColor' />
+                    <Star
+                      key={i}
+                      className='w-4 h-4 text-amber-400'
+                      fill='currentColor'
+                    />
                   ))}
                 </div>
               </div>
@@ -248,35 +287,51 @@ const RoomDetail = () => {
               {/* Specs */}
               <div>
                 <h3 className='text-2xl font-bold text-brand-text mb-4'>
-                  {t('rooms.room_details')}
+                  {t("rooms.room_details")}
                 </h3>
                 <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
                   <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
                     <Ruler className='w-5 h-5 text-brand-primary flex-shrink-0' />
                     <div className='flex items-center gap-2 w-full justify-between'>
-                      <div className='text-sm text-brand-text/60'>{t('rooms.size')}</div>
-                      <div className='font-semibold text-brand-text'>{room.size ? `${room.size} m²` : ''}</div>
+                      <div className='text-sm text-brand-text/60'>
+                        {t("rooms.size")}
+                      </div>
+                      <div className='font-semibold text-brand-text'>
+                        {room.size ? `${room.size} m²` : ""}
+                      </div>
                     </div>
                   </div>
                   <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
                     <Bed className='w-5 h-5 text-brand-primary flex-shrink-0' />
                     <div className='flex items-center gap-2 w-full justify-between'>
-                      <div className='text-sm text-brand-text/60'>{t('rooms.bed')}</div>
-                      <div className='font-semibold text-brand-text'>{room.bed_type ?? ''}</div>
+                      <div className='text-sm text-brand-text/60'>
+                        {t("rooms.bed")}
+                      </div>
+                      <div className='font-semibold text-brand-text'>
+                        {room.bed_type ?? ""}
+                      </div>
                     </div>
                   </div>
                   <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
                     <Baby className='w-5 h-5 text-brand-primary flex-shrink-0' />
                     <div className='flex items-center gap-2 w-full justify-between'>
-                      <div className='text-sm text-brand-text/60'>{t('rooms.children')}</div>
-                      <div className='font-semibold text-brand-text'>{(room as any).children_capacity}</div>
+                      <div className='text-sm text-brand-text/60'>
+                        {t("rooms.children")}
+                      </div>
+                      <div className='font-semibold text-brand-text'>
+                        {(room as any).children_capacity}
+                      </div>
                     </div>
                   </div>
                   <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
                     <Layers className='w-5 h-5 text-brand-primary flex-shrink-0' />
                     <div className='flex items-center gap-2 w-full justify-between'>
-                      <div className='text-sm text-brand-text/60'>{t('rooms.floor')}</div>
-                      <div className='font-semibold text-brand-text'>{room.floor ?? ''}</div>
+                      <div className='text-sm text-brand-text/60'>
+                        {t("rooms.floor")}
+                      </div>
+                      <div className='font-semibold text-brand-text'>
+                        {room.floor ?? ""}
+                      </div>
                     </div>
                   </div>
                   {/* <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
@@ -292,8 +347,12 @@ const RoomDetail = () => {
                   <div className='flex flex-row items-center gap-3 rounded-xl border border-border/50 p-3 bg-white'>
                     <Users className='w-5 h-5 text-brand-primary flex-shrink-0' />
                     <div className='flex items-center gap-2 w-full justify-between'>
-                      <div className='text-sm text-brand-text/60'>{t('rooms.people')}</div>
-                      <div className='font-semibold text-brand-text'>{room.capacity ?? ''}</div>
+                      <div className='text-sm text-brand-text/60'>
+                        {t("rooms.people")}
+                      </div>
+                      <div className='font-semibold text-brand-text'>
+                        {room.capacity ?? ""}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -308,10 +367,14 @@ const RoomDetail = () => {
         <div className='hotel-container'>
           <div className='mb-8'>
             <h3 className='text-3xl md:text-2xl font-bold text-brand-text'>
-              {t('common.comments', { defaultValue: `${t('comments.guests_comments_title')}` })}
+              {t("common.comments", {
+                defaultValue: `${t("comments.guests_comments_title")}`
+              })}
             </h3>
             <p className='text-brand-text/70 mt-2'>
-              {t('common.share_thoughts', { defaultValue: `${t('comments.guests_comments_subtitle')}` })}
+              {t("common.share_thoughts", {
+                defaultValue: `${t("comments.guests_comments_subtitle")}`
+              })}
             </p>
             <Separator className='mt-4' />
           </div>
@@ -326,7 +389,9 @@ const RoomDetail = () => {
             <Card className='border border-border/60 bg-white w-full'>
               <CardContent className='pt-6'>
                 <h4 className='text-xl font-semibold text-brand-text mb-4'>
-                  {t('comments.comment', { defaultValue: `${t('comments.comments')}` })}
+                  {t("comments.comment", {
+                    defaultValue: `${t("comments.comments")}`
+                  })}
                 </h4>
                 <CommentForm roomId={String(room.id)} />
               </CardContent>
@@ -339,52 +404,81 @@ const RoomDetail = () => {
       <section className='py-14'>
         <div className='hotel-container'>
           <h3 className='text-3xl md:text-2xl font-bold text-brand-text mb-6'>
-            {t('rooms.related_rooms', { defaultValue: `${t('rooms.you_may_be_interested_in')}` })}
+            {t("rooms.related_rooms", {
+              defaultValue: `${t("rooms.you_may_be_interested_in")}`
+            })}
           </h3>
           {/* Desktop / Tablet Grid */}
           <div className='hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {!roomsLoading && relatedRooms.map((r) => {
-              const rLang = resolveLang(i18n.language);
-              const rName = pickLocalized(r as any, 'name', rLang) || 'Room';
-              const rDesc = pickLocalized(r as any, 'description', rLang) || '';
-              const rImage = (r.image_1 || r.image_2 || r.image_3 || r.image_4 || '') as string;
-              const rSize = r.size ? `${r.size} m²` : '';
-              const priceNumber = (r as any).price_standard ?? undefined;
-              const rPriceText = priceNumber !== undefined ? `${formatPrice(String(priceNumber), i18n.language)}/${t('common.night', { defaultValue: 'night' })}` : '';
-              const childrenCapacity = (r as any).children_capacity ?? 0;
+            {!roomsLoading &&
+              relatedRooms.map((r) => {
+                const rLang = resolveLang(i18n.language);
+                const rName = pickLocalized(r as any, "name", rLang) || "Room";
+                const rDesc =
+                  pickLocalized(r as any, "description", rLang) || "";
+                const rImage = (r.image_1 ||
+                  r.image_2 ||
+                  r.image_3 ||
+                  r.image_4 ||
+                  "") as string;
+                const rSize = r.size ? `${r.size} m²` : "";
+                const priceNumber = (r as any).price_standard ?? undefined;
+                const rPriceText =
+                  priceNumber !== undefined
+                    ? `${formatPrice(String(priceNumber), i18n.language)}/${t(
+                        "common.night",
+                        { defaultValue: "night" }
+                      )}`
+                    : "";
+                const childrenCapacity = (r as any).children_capacity ?? 0;
 
-              return (
-                <RoomCard
-                  key={String(r.id)}
-                  id={r.id as any}
-                  name={rName}
-                  image={rImage}
-                  size={rSize}
-                  priceText={rPriceText}
-                  beds={undefined as any}
-                  children={childrenCapacity}
-                  description={rDesc}
-                  onViewPath={`/room/${r.id}`}
-                  floor={r.floor ?? undefined}
-                  people={r.capacity ?? undefined}
-                />
-              );
-            })}
+                return (
+                  <RoomCard
+                    key={String(r.id)}
+                    id={r.id as any}
+                    name={rName}
+                    image={rImage}
+                    size={rSize}
+                    priceText={rPriceText}
+                    beds={undefined as any}
+                    children={childrenCapacity}
+                    description={rDesc}
+                    onViewPath={`/room/${r.id}`}
+                    floor={r.floor ?? undefined}
+                    people={r.capacity ?? undefined}
+                  />
+                );
+              })}
           </div>
 
           {/* Mobile Carousel */}
           <div className='block md:hidden'>
             {!roomsLoading && relatedRooms.length > 0 && (
-              <Carousel className='relative' opts={{ align: 'start', loop: true }}>
+              <Carousel
+                className='relative'
+                opts={{ align: "start", loop: true }}
+              >
                 <CarouselContent>
                   {relatedRooms.map((r) => {
                     const rLang = resolveLang(i18n.language);
-                    const rName = pickLocalized(r as any, 'name', rLang) || 'Room';
-                    const rDesc = pickLocalized(r as any, 'description', rLang) || '';
-                    const rImage = (r.image_1 || r.image_2 || r.image_3 || r.image_4 || '') as string;
-                    const rSize = r.size ? `${r.size} m²` : '';
+                    const rName =
+                      pickLocalized(r as any, "name", rLang) || "Room";
+                    const rDesc =
+                      pickLocalized(r as any, "description", rLang) || "";
+                    const rImage = (r.image_1 ||
+                      r.image_2 ||
+                      r.image_3 ||
+                      r.image_4 ||
+                      "") as string;
+                    const rSize = r.size ? `${r.size} m²` : "";
                     const priceNumber = (r as any).price_standard ?? undefined;
-                    const rPriceText = priceNumber !== undefined ? `${formatPrice(String(priceNumber), i18n.language)}/${t('common.night', { defaultValue: 'night' })}` : '';
+                    const rPriceText =
+                      priceNumber !== undefined
+                        ? `${formatPrice(
+                            String(priceNumber),
+                            i18n.language
+                          )}/${t("common.night", { defaultValue: "night" })}`
+                        : "";
                     const childrenCapacity = (r as any).children_capacity ?? 0;
                     return (
                       <CarouselItem key={String(r.id)} className='basis-full'>
